@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Api</name>
+    </assembly>
+    <members>
+        <member name="T:Api.Controllers.CalculaJurosController">
+            <summary>
+            Controller responsável por realizar o cálculo de juros
+            </summary>
+        </member>
+        <member name="P:Api.Controllers.CalculaJurosController._service">
+            <summary>
+            Interface do serviço
+            </summary>
+        </member>
+        <member name="M:Api.Controllers.CalculaJurosController.#ctor(Api.Interface.ICalculaJurosService)">
+            <summary>
+            Construtor da classe
+            </summary>
+            <param name="service"></param>
+        </member>
+        <member name="M:Api.Controllers.CalculaJurosController.CalculaJurosCompostoPrefixado(System.Decimal,System.Int32)">
+            <summary>
+            Obter resultado do juros composto
+            </summary>
+            <param name="valorInicial">Valor inicial</param>
+            <param name="meses">Qtde de meses</param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.Controllers.CalculaJurosController.EnderecoDoCodigoFonte">
+            <summary>
+            Retorna o endereço do GitHub do código fonte
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Api.Interface.ICalculaJurosService">
+            <summary>
+            Interface de service do cálcula juros
+            </summary>
+        </member>
+        <member name="M:Api.Interface.ICalculaJurosService.CalcularJurosCompostoPrefixado(System.Decimal,System.Int32)">
+            <summary>
+            Calcular juros composto prefixado
+            </summary>
+            <param name="valorInicial"></param>
+            <param name="qtdeDeMeses"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.Interface.ICalculaJurosService.EnderecoDoCodigoFonte">
+            <summary>
+            Retornar o endereço do código fonte
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Api.Model.ConfiguracaoDaAplicacao">
+            <summary>
+            Classe que mantém as informações da Aplicação
+            </summary>
+        </member>
+        <member name="P:Api.Model.ConfiguracaoDaAplicacao.UrlDoGitHub">
+            <summary>
+            Url do GitHub
+            </summary>
+        </member>
+        <member name="P:Api.Model.ConfiguracaoDaAplicacao.TaxaDeJuros">
+            <summary>
+            Taxa de juros prefixada do sistema
+            </summary>
+        </member>
+        <member name="P:Api.Model.ConfiguracaoDaAplicacao.QtdeDeCasasDecimaisParaTruncar">
+            <summary>
+            Qtde de casas decimais prefixada do sistema para truncar
+            </summary>
+        </member>
+        <member name="T:Api.Services.CalculaJurosService">
+            <summary>
+            Classe responsável por realizar o Cálculo de Juros Composto
+            </summary>
+        </member>
+        <member name="P:Api.Services.CalculaJurosService._config">
+            <summary>
+            Valor de configuração da aplicação
+            </summary>
+        </member>
+        <member name="M:Api.Services.CalculaJurosService.#ctor(Api.Model.ConfiguracaoDaAplicacao)">
+            <summary>
+            Construtor do serviço CalculaJurosService
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="M:Api.Services.CalculaJurosService.CalcularJurosCompostoPrefixado(System.Decimal,System.Int32)">
+            <summary>
+            Retorna o cálculo do juros composto prefixado de uma taxa de juros
+            </summary>
+            <param name="valorInicial">Valor inicial do valor</param>
+            <param name="meses">Qtde de meses</param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.Services.CalculaJurosService.EnderecoDoCodigoFonte">
+            <summary>
+            Retorna o endereço do código fonte
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Api.Startup">
+            <summary>
+            Classe responsável para configurar inicialização da aplicação
+            </summary>
+        </member>
+        <member name="M:Api.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Construtor da classe de 
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:Api.Startup.Configuration">
+            <summary>
+            Interface de configuração
+            </summary>
+        </member>
+        <member name="M:Api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configuração dos services
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            Configurar a aplicação
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>
